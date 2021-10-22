@@ -1,5 +1,5 @@
 <template>
-    <header class="v-header fixed w-full bg-transparency py-10">
+    <header class="v-header fixed w-full bg-transparency py-10 z-50">
         <div class="header-wrapper v-container relative flex justify-between pl-14 pr-14">
             <div class="header-logo relative">
                 <a class="font-bold text-white" href="/">
