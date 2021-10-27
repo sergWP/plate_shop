@@ -22,7 +22,7 @@
 
             </div>
 
-            <template v-if="slides.length > 1">
+            <template v-if="slides.length > 0">
 
                 <div class="swiper-navigations absolute right-0 bottom-0 z-50">
                     <div class="flex flex-row justify-end">
@@ -86,9 +86,9 @@
             return {
                 current_slide_number: 1,
                 slides: [
-                    {id:1, 'image':'hero-1.png', 'name':"Kembang Flower Mantap", 'description':"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"},
+                    {id:1, 'image':'hero-1.png', 'name':"Bang Flower Mantap", 'description':"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"},
                     {id:2, 'image':'hero-2.png', 'name':"Flower Mantap", 'description':"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"},
-                    {id:3, 'image':'hero-3.png', 'name':"Mantap Kembang Flower", 'description':"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"},
+                    {id:3, 'image':'hero-3.png', 'name':"Mantap Kemba Flower", 'description':"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"},
                     {id:4, 'image':'hero-4.png', 'name':"Ambert Flower Mantap", 'description':"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"}
                 ],
                 slider: null,
@@ -173,7 +173,7 @@
         }
 
         &.button-prev {
-            background-color: $white;
+            background-color: transparent;
             color: $green;
 
             .navigation-button__default {
