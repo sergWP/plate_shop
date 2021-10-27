@@ -1,6 +1,7 @@
 <template>
     <v-header />
     <v-hero />
+    <v-features />
 
     <div class="v-container p-14">
         <h1 class="text-5xl">{{title}}</h1>
@@ -15,6 +16,7 @@
 <script>
     import vHeader from './v-header'
     import vHero from './v-hero'
+    import vFeatures from './v-features'
     import vCatalog from './v-catalog'
 
     export default {
@@ -22,6 +24,7 @@
         components: {
             vHeader,
             vHero,
+            vFeatures,
             vCatalog
         },
         props: {},
