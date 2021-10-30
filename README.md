@@ -24,5 +24,10 @@ vue-cli-service build
 vue-cli-service lint
 ```
 
+### Watcher db.json
+```
+json-server --watch db.json
+```
+
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
