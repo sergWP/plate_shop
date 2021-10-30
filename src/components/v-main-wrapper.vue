@@ -37,7 +37,7 @@
         methods: {},
         watch: {},
         mounted() {
-            console.log('Yeeep!')
+            console.log('Main wrapper')
         }
     }
 </script>

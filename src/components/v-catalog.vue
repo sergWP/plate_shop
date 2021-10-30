@@ -2,7 +2,7 @@
     <v-sidebar />
     <div class="v-catalog flex flex-wrap flex-auto">
         <v-catalog-item
-            v-for="product in products"
+            v-for="product in PRODUCTS"
             :key="product.article"
             v-bind:product_data="product"
             @sendArticle="showChild"
@@ -12,6 +12,8 @@
 
 <script>
     import vCatalogItem from './v-catalog-item'
+    import { mapActions, mapGetters } from 'vuex'
+
     import vSidebar from './v-sidebar'
     export default {
         name: "v-catalog",
@@ -21,49 +23,29 @@
         },
         data() {
             return {
-                products: [
-                    {
-                        "image": "annie-spratt.png",
-                        "name": "Kaktus Plants",
-                        "price": 2100.234234234,
-                        "article": "T1",
-                        "available": true
-                    },
-                    {
-                        "image": "galina-n.png",
-                        "name": "Landak Plants",
-                        "price": 3150.12312412,
-                        "article": "T2",
-                        "available": true
-                    },
-                    {
-                        "image": "stephanie-harvey.png",
-                        "name": "Kecubung Plants",
-                        "price": 4200.51524,
-                        "article": "T3",
-                        "available": true
-                    },
-                    {
-                        "image": "stephanie-harvey-v.png",
-                        "name": "Kecubung Plants",
-                        "price": 5300.1245512,
-                        "article": "T4",
-                        "available": true
-                    },
-                    {
-                        "image": "stephanie-harvey-w.png",
-                        "name": "Kecubung Plants",
-                        "price": 6500.3522314,
-                        "article": "T5",
-                        "available": true
-                    }
-                ]
+
             }
         },
+        computed: {
+            ...mapGetters([
+                'PRODUCTS'
+            ])
+        },
         methods: {
+            ...mapActions([
+                'GET_PRODUCTS_FROM_API'
+            ]),
             showChild(data) {
                 console.log(data)
             }
+        },
+        mounted() {
+            this.GET_PRODUCTS_FROM_API()
+                .then((response) => {
+                    if(response.data) {
+                        console.log('Data ready');
+                    }
+                });
         }
     }
 </script>
