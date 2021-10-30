@@ -9,18 +9,18 @@
                     <span class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">M</span>
                 </a>
             </div>
-            <v-cart />
+            <v-mini-cart />
         </div>
     </header>
 </template>
 
 <script>
-    import vCart from './v-cart'
+    import vMiniCart from './v-mini-cart'
 
     export default {
         name: "v-header",
         components: {
-            vCart
+            vMiniCart
         }
     }
 </script>

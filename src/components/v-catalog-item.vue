@@ -10,7 +10,7 @@
         <p class="text-base">Price: {{product_data.price}} UAH</p>
         <button
                 class="text-base"
-                @click="sendDataToParent"
+                @click="addToCart"
         >Add to cart</button>
     </div>
 </template>
@@ -30,11 +30,8 @@
             return {}
         },
         methods: {
-            sendDataToParent() {
-                this.$emit(
-                    'sendArticle',
-                    this.product_data.article
-                )
+            addToCart() {
+                this.$emit('addToCart', this.product_data)
             }
         }
     }

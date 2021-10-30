@@ -11,13 +11,22 @@
         </div>
 
     </div>
+
+    <template v-if="CART.length > 0">
+        <v-cart
+            :cart_data="CART"
+        />
+    </template>
+
 </template>
 
 <script>
+    import {mapGetters} from 'vuex'
     import vHeader from './v-header'
     import vHero from './v-hero'
     import vFeatures from './v-features'
     import vCatalog from './v-catalog'
+    import vCart from './v-cart'
 
     export default {
         name: "v-main-wrapper",
@@ -25,7 +34,8 @@
             vHeader,
             vHero,
             vFeatures,
-            vCatalog
+            vCatalog,
+            vCart
         },
         props: {},
         data() {
@@ -33,7 +43,11 @@
                 title: 'Main wrapper'
             }
         },
-        computed: {},
+        computed: {
+            ...mapGetters([
+                'CART'
+            ])
+        },
         methods: {},
         watch: {},
         mounted() {
