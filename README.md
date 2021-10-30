@@ -1,4 +1,8 @@
-# plate_shop
+# Plate Shop
+
+<img src="https://img.shields.io/badge/vue-3.0.0-%2342b983">
+<img src="https://img.shields.io/badge/vuex-4.0.2-%2342b983">
+<img src="https://img.shields.io/badge/Tailwind-2.0.2-%2300c2ff">
 
 ## Project setup
 ```
@@ -7,17 +11,17 @@ npm install
 
 ### Compiles and hot-reloads for development
 ```
-npm run serve
+vue-cli-service serve
 ```
 
 ### Compiles and minifies for production
 ```
-npm run build
+vue-cli-service build
 ```
 
 ### Lints and fixes files
 ```
-npm run lint
+vue-cli-service lint
 ```
 
 ### Customize configuration
